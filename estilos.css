@@ -1,0 +1,363 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.header{
+    height: 10vh;
+     
+}
+nav{
+    font-family: 'Anton', sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.cuerpo{
+    
+    height: 50vh;
+    width: auto;
+}
+.fondo{
+    background-image: url(Imagenes/pastillas-frenos.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 40vh;
+    width: 90%;
+    padding-top: calc(20vh - 50px);
+    border-radius: 15px;
+}
+
+.texto{
+    display: flex;
+    color: rgb(250, 205, 4);
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 3px 3px rgb(204, 204, 204);
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    height: 100px;
+    margin: auto 5% auto 5%;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 15px;
+    border:  rgb(255,193,7)2PX solid;
+    -webkit-text-stroke: 1px rgb(255,193,7);
+    
+} 
+h1{
+    font-weight: 400;
+    font-size: 3.6rem;
+    font-family: 'Anton', sans-serif;
+    
+}
+
+@media (max-width:450px){
+    h1{
+        font-size: 2.6rem;
+    }
+}
+.freno{
+    color:white;
+
+}
+
+/*Cubo UC*/
+.tresd{
+    height: 40vh;
+    width: 100%;
+    background-color: #212429;
+}
+.cubo{
+    width: auto;
+    height: 50vh;
+    perspective: 0px;
+    background-color: #212429;
+}
+.cubo-labs{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    width: 30vw;
+    transform-style: preserve-3d;
+    animation: spin 15s infinite linear;
+    padding-left: 15px;
+}
+.face{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #212429;
+}
+.top{
+    background-image: url(Imagenes/logo-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.bottom{
+    background-image: url(Imagenes/logo-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.right{
+    background-image: url(Imagenes/logo-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateY(90deg) translateZ(100px);
+}
+.left{
+    background-image: url(Imagenes/logo-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.front{
+    background-image: url(Imagenes/logo-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateX(0deg) translateZ(100px);
+}
+.back{
+    background-image: url(Imagenes/logo-3.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotateX(180deg) translateZ(100px);
+}
+@keyframes spin{
+    from{
+        transform: translateZ(100px) rotateY(360deg);
+    }
+    to{
+        transform: translateZ(0px) rotateY(0deg);
+    }
+}
+@media (max-width:450px){
+    .tresd{
+        height: 40vh;
+        width: 100%;
+    }
+    .lorem{
+        font-size: 1rem;
+        margin-top: 60%;
+       
+    }
+    .cubo-labs{
+        height: 55%;
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .cubo{
+        height: 100vh;
+    }   
+}
+@media (max-width:800px){
+    .tresd{
+        height: 40vh;
+    }
+    .cubo{
+        padding-top: 15px;
+    }
+}
+@media (min-width:900px){
+    
+}
+/*Fin Cubo 3d*/
+
+.texto-lateral{
+    width: auto;
+    height: 40vh;
+    font-size: 30px;
+}
+@media (max-width:1000px){
+    .lorem{
+        font-size: 20px;
+        width: auto;
+        padding-left: 20px;
+    }
+}
+@media (max-width:770px){
+    .lorem{
+        font-size: 15px;
+        width: auto;
+        padding-left: 20px;
+    }
+}
+
+
+/* Inicio hover*/
+
+
+.marcas{
+    background-color: #212429;
+    height: 40vh;
+    width: 100%;
+    
+}
+
+.container-marcas{
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+.container-marcas .cara{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container-marcas .cara span{
+    width: 200px;
+    height: 100%;
+    transition: .5s;
+    
+}
+.container-marcas .cara1 span{
+    background-image: url(Imagenes/13.png);
+   background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-origin: top;  
+    
+}
+.container-marcas:active .cara1 span{
+    transform: rotateX(90deg)translateY(-50%);
+}
+.container-marcas .cara2 span{
+    background-image: url(Imagenes/pastillas\ 2.jpg);
+    transform-origin: bottom;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateX(90deg) translateX(50%);
+}
+.container-marcas:active .cara2 span{
+    transform: rotateX(0deg) translateY(0);
+}
+.container-marcas .cara span:nth-child(1){
+    background-position-x: -40px;
+    transition-delay: 0s;
+    border-radius: 15px 0px 0px 15px;
+}
+.container-marcas .cara span:nth-child(2){
+    background-position-x: -140px;
+    transition-delay: .1s;
+}
+.container-marcas .cara span:nth-child(3){
+    background-position-x: -240px;
+    transition-delay: .2s;
+}
+.container-marcas .cara span:nth-child(4){
+    background-position-x: -340px;
+    transition-delay: .3s;
+    border-radius: 0px 15px 15px 0px;
+}
+
+@media (max-width:850px){
+    .marcas{
+        height: 50vh;
+    }
+}
+
+/* Fin Marcas */
+
+.algo{
+    padding: 20px 0 20px 0;
+    height: max-content;
+    width: auto;
+    font-family: 'Anton', sans-serif;
+    background: linear-gradient(100deg,black, gray, darkgray, darkorange, orange , rgba(255, 217, 0, 0.87), antiquewhite ,whitesmoke, white);
+    background-size: 300% 300%;
+    animation: color 8s ease-in-out infinite;
+    
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.carousel{
+    height: vh;
+    width: auto; 
+}
+
+.texto-2{
+    width: auto;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'Anton', sans-serif;
+}
+/*hover*/
+.texto-3{
+    display: flex;
+    color: rgb(250, 205, 4);
+    justify-content: center;
+    align-items: center;
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    height: 50px;
+    margin-top: 250px;
+    /*margin: auto 5% auto 5%;*/
+    text-align: center;
+    line-height: 80px;
+    border-radius: 15px;
+    border:  rgb(255,193,7)2PX solid;
+    -webkit-text-stroke: 1px rgb(255,193,7);
+}
+/*hover*/
+.pie{
+    background-image: linear-gradient(to right,yellow,orange, darkorange, rgb(212, 26, 26),gray);
+    height: 25vh;
+    width: auto;
+    border: 1px solid orange;
+}
+footer{
+    background-color: #212429;
+    height: 280px;
+    width: 100%;
+}
+footer svg{
+    width: 40px;
+    height: 40px;
+    color: green;
+    align-items:center;
+}
+.contacto{
+    color: rgb(255,193,7);
+    font-family: 'Anton', sans-serif;
+}
+@media (max-width: 575px) {
+    footer .contacto{
+    padding-top: 10px;
+ }
+} 
